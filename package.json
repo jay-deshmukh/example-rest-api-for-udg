@@ -1,0 +1,28 @@
+{
+  "name": "rest-api-for-udg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev_reviews": "nodemon --exec babel-node reviews",
+    "dev_users": "nodemon --exec babel-node users",
+    "start": "node reviews_dist & node users_dist",
+    "build": "babel users -d users_dist && babel reviews -d reviews_dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.15.0",
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "uuid": "^7.0.3"
+  }
+}
